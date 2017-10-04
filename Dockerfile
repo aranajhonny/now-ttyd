@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04
+FROM ubuntu:17.10
 LABEL maintainer "Shuanglei Tao - tsl0922@gmail.com"
 
 RUN apt-get update \
