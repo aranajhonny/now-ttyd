@@ -34,8 +34,8 @@ RUN apt-get update \
     && rm -rf /tmp/ttyd
     
 RUN apt-get update \
-    apt upgrade \
-    apt install -y wget curl zsh
+    apt-get upgrade \
+    apt-get install -y wget curl zsh
 
 EXPOSE 7681
 
