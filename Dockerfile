@@ -33,9 +33,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/ttyd
     
-RUN apt install -y wget curl zsh
-
-RUN apt-get update && apt upgrade
+RUN apt-get update \
+    apt upgrade \
+    apt install -y wget curl zsh
 
 EXPOSE 7681
 
