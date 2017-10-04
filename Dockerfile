@@ -1,6 +1,5 @@
 
-FROM ubuntu:17.10
-LABEL maintainer "Shuanglei Tao - tsl0922@gmail.com"
+FROM ubuntu:16.04
 
 RUN apt-get update \
     && apt-get install -y \
@@ -34,10 +33,10 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/ttyd
     
-RUN apt install -y wget curl
+RUN apt install -y wget curl zsh
 
 EXPOSE 7681
 
 ENTRYPOINT ["ttyd"]
 
-CMD ["bash"]
+CMD ["zsh"]
