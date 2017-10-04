@@ -35,6 +35,8 @@ RUN apt-get update \
     
 RUN apt install -y wget curl zsh
 
+RUN apt-get update && apt upgrade
+
 EXPOSE 7681
 
 ENTRYPOINT ["ttyd"]
